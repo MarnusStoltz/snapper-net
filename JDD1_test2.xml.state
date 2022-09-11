@@ -1,0 +1,29 @@
+<itsabeastystatewerein version='2.0' sample='10000'>
+<statenode id='originTime:species'>originTime:species[1 1] (0.0,Infinity): 1.3089406339890457 </statenode>
+<statenode id='netDivRate:species'>netDivRate:species[1 1] (0.0,Infinity): 0.6031803880317819 </statenode>
+<statenode id='turnOverRate:species'>turnOverRate:species[1 1] (0.0,1.0): 0.1590585047249506 </statenode>
+<statenode id='u'>u[1 1] (0.0,Infinity): 2.087255859139935 </statenode>
+<statenode id='v'>v[1 1] (0.0,Infinity): 0.6575045375075598 </statenode>
+<statenode id='coalescenceRate'>coalescenceRate[9 1] (0.0,10.0): 0.08506570280761215 0.08605189957826892 0.10511173723334934 0.08398091791083516 0.07146334237733608 371.65068170437723 0.3981745716093351 0.18876493291300697 20.456930680504083 </statenode>
+<statenode id='network:species'>((C[&amp;Theta=23.511238184010264]:1.30612648004543,(R[&amp;Theta=23.241787918707015]:0.38780326069801,(A[&amp;Theta=23.81493379392989]:0.17267346842318254,(Q[&amp;Theta=19.027370802177646]:0.1721545688631232,L[&amp;Theta=27.98637641995151]:0.1721545688631232)S4[&amp;Theta=0.09776637713819136]:5.188995600593493E-4)S3[&amp;Theta=10.595188254174877]:0.21512979227482748)S2[&amp;Theta=5.022922463170952]:0.91832321934742)S1[&amp;Theta=0.005381397367086934]:0.002814153943615727)</statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"divrRateScale:species","p":0.5,"accept":99,"reject":34,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"turnOverScale:species","p":0.5,"accept":83,"reject":65,"acceptFC":0,"rejectFC":0,"rejectIv":17,"rejectOp":17},
+{"id":"gammaProbUniform:species","p":"NaN","accept":0,"reject":152,"acceptFC":0,"rejectFC":0,"rejectIv":152,"rejectOp":152},
+{"id":"gammaProbRndWalk:species","p":"NaN","accept":0,"reject":144,"acceptFC":0,"rejectFC":0,"rejectIv":144,"rejectOp":144},
+{"id":"originMultiplier:species","p":1,"accept":19,"reject":42,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"addReticulation:species","p":"NaN","accept":0,"reject":2129,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"deleteReticulation:species","p":"NaN","accept":0,"reject":2134,"acceptFC":0,"rejectFC":0,"rejectIv":2134,"rejectOp":2134},
+{"id":"networkMultiplier:species","p":"NaN","accept":16,"reject":53,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"flipReticulation:species","p":"NaN","accept":0,"reject":137,"acceptFC":0,"rejectFC":0,"rejectIv":137,"rejectOp":137},
+{"id":"relocateBranch:species","p":"NaN","accept":9,"reject":132,"acceptFC":0,"rejectFC":0,"rejectIv":12,"rejectOp":12},
+{"id":"nodeSlider:species","p":"NaN","accept":95,"reject":40,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"NodeUniform:species","p":"NaN","accept":20,"reject":114,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"relocateBranchNarrow:species","p":"NaN","accept":13,"reject":124,"acceptFC":0,"rejectFC":0,"rejectIv":23,"rejectOp":23},
+{"id":"ChangeUAndV","p":"NaN","accept":72,"reject":53,"acceptFC":0,"rejectFC":0,"rejectIv":8,"rejectOp":8},
+{"id":"ChangeGamma","p":0.5,"accept":452,"reject":1615,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"ChangeAllGamma","p":"NaN","accept":125,"reject":2030,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0}
+]}
+-->

@@ -1,0 +1,86 @@
+#
+#model:
+#
+#<?xml version="1.0" encoding="UTF-8" standalone="no"?><input id="posterior" spec="beast.core.util.CompoundDistribution">
+#    <distribution id="prior" spec="beast.core.util.CompoundDistribution">
+#        <distribution id="snapprior.JDD1-all-chr" spec="snappNetProject.core.SnappNetPrior">
+#            <parameter estimate="false" id="alpha" lower="0.0" name="alpha" spec="beast.core.parameter.RealParameter">2.0</parameter>
+#            <parameter estimate="false" id="beta" lower="0.0" name="beta" spec="beast.core.parameter.RealParameter">20.0</parameter>
+#            <parameter id="coalescenceRate" lower="0.0" name="coalescenceRate" spec="beast.core.parameter.RealParameter" upper="1.0">0.01</parameter>
+#            <tree clusterType="upgma" id="Tree.JDD1-all-chr" spec="beast.util.ClusterTree">
+#                <taxa dataType="integer" id="snapalignment.JDD1-all-chr" spec="snappNetProject.core.SnapData" statecount="3">
+#                    <taxonset id="C" spec="beast.evolution.alignment.TaxonSet">
+#                        <taxon id="C1" spec="beast.evolution.alignment.Taxon"/>
+#                    </taxonset>
+#                    <taxonset id="R" spec="beast.evolution.alignment.TaxonSet">
+#                        <taxon id="R1" spec="beast.evolution.alignment.Taxon"/>
+#                    </taxonset>
+#                    <taxonset id="Q" spec="beast.evolution.alignment.TaxonSet">
+#                        <taxon id="Q1" spec="beast.evolution.alignment.Taxon"/>
+#                    </taxonset>
+#                    <taxonset id="A" spec="beast.evolution.alignment.TaxonSet">
+#                        <taxon id="A1" spec="beast.evolution.alignment.Taxon"/>
+#                    </taxonset>
+#                    <taxonset id="L" spec="beast.evolution.alignment.TaxonSet">
+#                        <taxon id="L1" spec="beast.evolution.alignment.Taxon"/>
+#                    </taxonset>
+#                </taxa>
+#                <parameter id="RealParameter.0" lower="0.0" name="clock.rate" spec="beast.core.parameter.RealParameter" upper="0.0">1.0</parameter>
+#            </tree>
+#        </distribution>
+#        <distribution id="networkPrior.JDD1-all-chr" spec="snappNetProject.core.BirthHybridizationModel">
+#            <network id="network:species" spec="snappNetProject.core.NetworkParser" tree="@Tree.JDD1-all-chr"/>
+#            <parameter id="netDivRate:species" lower="0.0" name="netDiversification" spec="beast.core.parameter.RealParameter">2.0</parameter>
+#            <parameter id="turnOverRate:species" lower="0.0" name="turnOver" spec="beast.core.parameter.RealParameter" upper="1.0">0.5</parameter>
+#            <parameter id="RealParameter.1" lower="0.0" name="betaShape" spec="beast.core.parameter.RealParameter" upper="0.0">1.0</parameter>
+#        </distribution>
+#        <prior id="networkOrigin.JDD1-all-chr" name="distribution">
+#            <parameter id="originTime:species" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">0.1</parameter>
+#            <Exponential id="Exponential.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.2" name="mean" spec="beast.core.parameter.RealParameter">0.1</parameter>
+#            </Exponential>
+#        </prior>
+#        <prior id="turnOverPrior.JDD1-all-chr" name="distribution" x="@turnOverRate:species">
+#            <Beta id="Beta.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.4" name="alpha" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="RealParameter.5" name="beta" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            </Beta>
+#        </prior>
+#        <prior id="netDivPrior.JDD1-all-chr" name="distribution" x="@netDivRate:species">
+#            <Exponential id="Exponential.1" name="distr">
+#                <parameter estimate="false" id="RealParameter.3" name="mean" spec="beast.core.parameter.RealParameter">10.0</parameter>
+#            </Exponential>
+#        </prior>
+#        <prior id="uPrior.JDD1-all-chr" name="distribution">
+#            <parameter id="u" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <OneOnX id="OneOnX.2" name="distr"/>
+#        </prior>
+#        <prior id="vPrior.JDD1-all-chr" name="distribution">
+#            <parameter id="v" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <OneOnX id="OneOnX.3" name="distr"/>
+#        </prior>
+#    </distribution>
+#    <distribution id="likelihood" spec="beast.core.util.CompoundDistribution">
+#        <distribution data="@snapalignment.JDD1-all-chr" id="treeLikelihood.JDD1-all-chr" spec="snappNetProject.core.SnappNetNetworkLikelihood" speciesNetwork="@network:species" tree="@Tree.JDD1-all-chr">
+#            <siteModel id="MutationSiteModel.JDD1-all-chr" spec="beast.evolution.sitemodel.SiteModel">
+#                <parameter estimate="false" id="mutationRate" name="mutationRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="shape" name="shape" spec="beast.core.parameter.RealParameter">2.0</parameter>
+#                <parameter estimate="false" id="proportionInvariant" name="proportionInvariant" spec="beast.core.parameter.RealParameter">0.0</parameter>
+#                <substModel coalescenceRate="@coalescenceRate" id="MutationModel" mutationRateU="@u" mutationRateV="@v" spec="snappNetProject.core.SnappNetSubstitutionModel"/>
+#            </siteModel>
+#        </distribution>
+#    </distribution>
+#</input>
+#
+Sample	posterior	likelihood	prior	u	v	netDivRate:species	turnOverRate:species	originTime:species
+0	-77030.55568749347	-41059.24045995962	-35971.31522753384	1.0	1.0	2.0	0.5	0.1
+1000	-41658.86896899428	-39054.91651876165	-2603.952450232625	1.243060084686098	0.8364465473954387	0.7070130890141633	0.18288254300305518	4.093274009893052
+2000	-39278.610829144905	-36312.15620094752	-2966.4546281973903	12.219051566785488	0.5213327843618811	0.21564574071168482	0.4355804420939119	2.4447966195920783
+3000	-38484.21035609812	-35767.59912548316	-2716.611230614961	2.9269903006180362	0.6030082402621623	0.26962329872543594	0.6406669698870965	1.3941559500563727
+4000	-38322.56826171863	-35623.4067994096	-2699.1614623090336	30.522652487896153	0.5083270457232514	0.41545228845484244	0.4522512155564903	1.5335785297376934
+5000	-38306.453209919724	-35666.07877769185	-2640.3744322278717	7.920172947170709	0.5336919370720765	0.46078522644080894	0.2781913351521523	1.2785378442040012
+6000	-38308.95689158992	-35646.73705952651	-2662.219832063413	2.523970533014338	0.6235195848566384	0.22447121044806376	0.35569118270098893	1.3601765120084395
+7000	-38296.735510002356	-35651.3917970426	-2645.343712959756	2.9472867996152132	0.6021539445394416	0.16509496440391683	0.73299994917371	1.3035581257080249
+8000	-38300.53654447742	-35694.66462918093	-2605.8719152964923	2.2781786192271136	0.6405932999625553	0.34606508287483406	0.7216219174897255	1.2938291238754476
+9000	-38307.965593811205	-35676.909717638504	-2631.0558761727016	1.9444625444391987	0.6730747543177455	1.045681661764212	0.11812329025262626	1.3231387342092105
+10000	-38296.228129112074	-35630.40929891683	-2665.8188301952446	2.087255859139935	0.6575045375075598	0.6031803880317819	0.1590585047249506	1.3089406339890457

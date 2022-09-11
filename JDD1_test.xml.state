@@ -1,0 +1,29 @@
+<itsabeastystatewerein version='2.0' sample='10089'>
+<statenode id='originTime:species'>originTime:species[1 1] (0.0,Infinity): 0.1 </statenode>
+<statenode id='netDivRate:species'>netDivRate:species[1 1] (0.0,Infinity): 0.35104611288742943 </statenode>
+<statenode id='turnOverRate:species'>turnOverRate:species[1 1] (0.0,1.0): 0.43968299143046474 </statenode>
+<statenode id='u'>u[1 1] (0.0,Infinity): 0.9907920055959211 </statenode>
+<statenode id='v'>v[1 1] (0.0,Infinity): 1.009380750194676 </statenode>
+<statenode id='coalescenceRate'>coalescenceRate[5 1] (0.0,10.0): 38.16708697930438 70.0605012075231 83.45641839417542 38.156339666742944 5.608512213807131 </statenode>
+<statenode id='network:species'>((A:2.840922861750374,(C:0.5760898396025902,B:0.5760898396025902)S1:2.264833022147784)S2:0.15907713824962588)</statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"divrRateScale:species","p":0.5,"accept":158,"reject":94,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"turnOverScale:species","p":0.5,"accept":121,"reject":93,"acceptFC":0,"rejectFC":0,"rejectIv":18,"rejectOp":18},
+{"id":"gammaProbUniform:species","p":"NaN","accept":0,"reject":225,"acceptFC":0,"rejectFC":0,"rejectIv":225,"rejectOp":225},
+{"id":"gammaProbRndWalk:species","p":"NaN","accept":0,"reject":241,"acceptFC":0,"rejectFC":0,"rejectIv":241,"rejectOp":241},
+{"id":"originMultiplier:species","p":1,"accept":0,"reject":106,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"addReticulation:species","p":"NaN","accept":0,"reject":240,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"deleteReticulation:species","p":"NaN","accept":0,"reject":215,"acceptFC":0,"rejectFC":0,"rejectIv":215,"rejectOp":215},
+{"id":"networkMultiplier:species","p":"NaN","accept":0,"reject":115,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"flipReticulation:species","p":"NaN","accept":0,"reject":222,"acceptFC":0,"rejectFC":0,"rejectIv":222,"rejectOp":222},
+{"id":"relocateBranch:species","p":"NaN","accept":32,"reject":204,"acceptFC":0,"rejectFC":0,"rejectIv":11,"rejectOp":11},
+{"id":"nodeSlider:species","p":"NaN","accept":168,"reject":73,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"NodeUniform:species","p":"NaN","accept":53,"reject":210,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"relocateBranchNarrow:species","p":"NaN","accept":3,"reject":210,"acceptFC":0,"rejectFC":0,"rejectIv":99,"rejectOp":99},
+{"id":"ChangeUAndV","p":"NaN","accept":8,"reject":227,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"ChangeGamma","p":0.5,"accept":1475,"reject":2086,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"ChangeAllGamma","p":"NaN","accept":323,"reject":3188,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0}
+]}
+-->
